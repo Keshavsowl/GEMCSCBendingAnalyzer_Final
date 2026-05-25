@@ -1,0 +1,255 @@
+DEBUG 2026-02-22 20:31:43.808 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 20:31:43.808 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 20:31:43.808 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 20:31:43.808 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 20:31:43.808 UTC: 	 Executing command: 'submit'
+DEBUG 2026-02-22 20:31:43.809 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-02-22 20:31:43.809 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-02-22 20:31:43.809 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-02-22 20:31:43.813 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+DEBUG 2026-02-22 20:31:43.817 UTC: 	 Checking credentials
+DEBUG 2026-02-22 20:31:43.817 UTC: 	 Found proxy file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:31:43.817 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2026-02-22 20:31:43.817 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:31:43.841 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:31:43.841 UTC: 	 Getting proxy life time left
+DEBUG 2026-02-22 20:31:43.842 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:31:43.866 UTC: 	 output : 33405
+33405
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:31:43.866 UTC: 	 Proxy valid for 09:16:45 hours
+DEBUG 2026-02-22 20:31:43.866 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2026-02-22 20:31:43.915 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2026-02-22 20:31:43.915 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:31:43.941 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:31:43.941 UTC: 	 Getting myproxy life time left for 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-02-22 20:31:43.941 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-02-22 20:31:44.443 UTC: 	 output : username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+  renewal policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 531:50:34  (22.2 days)
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:31:44.443 UTC: 	 Myproxy is valid: 1914600
+DEBUG 2026-02-22 20:31:44.443 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc  - validity: 22 days, 3:50:00
+DEBUG 2026-02-22 20:31:44.443 UTC: 	 Command use: submit
+DEBUG 2026-02-22 20:31:44.443 UTC: 	 Options use: ['crab3_run_GE21ana.py']
+DEBUG 2026-02-22 20:31:44.443 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2026-02-22 20:31:44.492 UTC: 	 CRABClient version: v3.251020
+DEBUG 2026-02-22 20:31:44.492 UTC: 	 Instance is prod
+DEBUG 2026-02-22 20:31:44.492 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2026-02-22 20:31:44.492 UTC: 	 Command api workflow
+DEBUG 2026-02-22 20:31:44.492 UTC: 	 Started submission
+DEBUG 2026-02-22 20:31:44.492 UTC: 	 Working on /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2
+DEBUG 2026-02-22 20:31:44.520 UTC: 	 Loading required information from the environment
+DEBUG 2026-02-22 20:31:44.520 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-02-22 20:31:44.520 UTC: 	 Loading required information from the environment
+DEBUG 2026-02-22 20:31:44.520 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-02-22 20:31:44.520 UTC: 	 UNIQUE NAME: tarUUID 487b5ec6-77fe-4c10-887e-3de251db7e9b 
+DEBUG 2026-02-22 20:31:44.520 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.transferLogs = True
+config.General.workArea = 'crabLogs'
+config.General.requestName = 'Run2025D_muon0_v2'
+config.section_('JobType')
+config.JobType.psetName = 'run_GE21ana.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.numCores = 1
+config.section_('Data')
+config.Data.inputDataset = '/Muon0/Run2025D-ZMu-PromptReco-v1/RAW-RECO'
+config.Data.unitsPerJob = 1
+config.Data.splitting = 'FileBased'
+config.Data.inputDBS = 'global'
+config.Data.outLFNDirBase = '/store/group/alca_muonalign/kkeshav/'
+config.Data.outputDatasetTag = 'Before_alginment'
+config.Data.publication = False
+config.section_('Site')
+config.Site.storageSite = 'T3_CH_CERNBOX'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2026-02-22 20:31:44.520 UTC: 	 self.config.JobType.psetName: run_GE21ana.py
+INFO 2026-02-22 20:31:44.520 UTC: 	 Importing CMSSW configuration run_GE21ana.py
+INFO 2026-02-22 20:31:51.436 UTC: 	 Finished importing CMSSW configuration run_GE21ana.py
+DEBUG 2026-02-22 20:31:51.436 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/inputs/PSet.py
+DEBUG 2026-02-22 20:31:52.700 UTC: 	 The following EDM output files will be collected: []
+DEBUG 2026-02-22 20:31:52.700 UTC: 	 The following TFile output files will be collected: ['output_test.root']
+DEBUG 2026-02-22 20:31:52.700 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2026-02-22 20:31:52.700 UTC: 	 Loading required information from the environment
+DEBUG 2026-02-22 20:31:52.700 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-02-22 20:31:52.700 UTC: 	 Making tarball in /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/inputs/487b5ec6-77fe-4c10-887e-3de251db7e9bdefault.tgz
+DEBUG 2026-02-22 20:31:52.701 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/bin
+DEBUG 2026-02-22 20:31:52.702 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/bin to tarball
+DEBUG 2026-02-22 20:31:52.705 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/python
+DEBUG 2026-02-22 20:31:52.705 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/python to tarball
+DEBUG 2026-02-22 20:31:52.819 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/cfipython
+DEBUG 2026-02-22 20:31:52.819 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/cfipython to tarball
+DEBUG 2026-02-22 20:31:52.923 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/lib
+DEBUG 2026-02-22 20:31:52.923 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/lib to tarball
+DEBUG 2026-02-22 20:31:53.633 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/biglib
+DEBUG 2026-02-22 20:31:53.633 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/biglib to tarball
+DEBUG 2026-02-22 20:31:53.634 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/module
+DEBUG 2026-02-22 20:31:53.634 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/config/SCRAM/hooks
+DEBUG 2026-02-22 20:31:53.635 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/config/SCRAM/hooks to tarball
+DEBUG 2026-02-22 20:31:53.815 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/CSCRecHitD/python to tarball
+DEBUG 2026-02-22 20:31:53.822 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/CSCSegment/python to tarball
+DEBUG 2026-02-22 20:31:53.839 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/Configuration/python to tarball
+DEBUG 2026-02-22 20:31:53.846 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/DTRecHit/interface to tarball
+DEBUG 2026-02-22 20:31:53.850 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/DTRecHit/python to tarball
+DEBUG 2026-02-22 20:31:53.873 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/DTSegment/python to tarball
+DEBUG 2026-02-22 20:31:53.972 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMCSCSegment/python to tarball
+DEBUG 2026-02-22 20:31:53.976 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMRecHit/data to tarball
+DEBUG 2026-02-22 20:31:53.979 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMRecHit/interface to tarball
+DEBUG 2026-02-22 20:31:53.987 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMRecHit/python to tarball
+DEBUG 2026-02-22 20:31:53.994 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMSegment/python to tarball
+DEBUG 2026-02-22 20:31:53.999 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/RPCRecHit/data to tarball
+DEBUG 2026-02-22 20:31:54.211 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/RPCRecHit/python to tarball
+DEBUG 2026-02-22 20:31:54.216 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/Configuration/Generator/data to tarball
+DEBUG 2026-02-22 20:31:54.233 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/Configuration/Generator/python to tarball
+DEBUG 2026-02-22 20:31:55.092 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/python to tarball
+DEBUG 2026-02-22 20:31:56.063 UTC: 	 Uploading archive /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/inputs/487b5ec6-77fe-4c10-887e-3de251db7e9bdefault.tgz (3.028320.1 MB) to the CRAB cache.
+DEBUG 2026-02-22 20:31:57.407 UTC: 	 Encoded data for curl request: subresource=upload&objecttype=sandbox&tarballname=9bb12e692b4ec99277660671330bd54a3bee58657524acdf485b6129b79e5c14.tar.gz
+DEBUG 2026-02-22 20:31:57.467 UTC: 	 sandbox 9bb12e692b4ec99277660671330bd54a3bee58657524acdf485b6129b79e5c14.tar.gz is already in the S3 store, will not upload again
+DEBUG 2026-02-22 20:31:57.467 UTC: 	 Loading required information from the environment
+DEBUG 2026-02-22 20:31:57.467 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-02-22 20:31:57.467 UTC: 	 Making tarball in /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/inputs/debugFiles.tgz
+DEBUG 2026-02-22 20:31:57.473 UTC: 	 Uploading archive /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/inputs/debugFiles.tgz (2 KB) to the CRAB cache.
+DEBUG 2026-02-22 20:31:57.475 UTC: 	 Encoded data for curl request: subresource=upload&objecttype=sandbox&tarballname=686b6ef00f4099c658742448c2e155ac3138db6125f92aff222d57a2b928d483.tar.gz
+DEBUG 2026-02-22 20:31:57.518 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=kkeshav/sandboxes/686b6ef00f4099c658742448c2e155ac3138db6125f92aff222d57a2b928d483.tar.gz" -F "AWSAccessKeyId=715203df6482458ba839e73e6dab634b" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjYtMDItMjJUMjE6MzE6NTdaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAia2tlc2hhdi9zYW5kYm94ZXMvNjg2YjZlZjAwZjQwOTljNjU4NzQyNDQ4YzJlMTU1YWMzMTM4ZGI2MTI1ZjkyYWZmMjIyZDU3YTJiOTI4ZDQ4My50YXIuZ3oifV19" -F "signature=52KNeCqn9iqV9dYZvA5Zf6nUYWw=" -F "file=@/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/inputs/debugFiles.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2026-02-22 20:31:57.614 UTC: 	 exitcode: 0
+stdout: b''
+DEBUG 2026-02-22 20:31:57.614 UTC: 	 upload to S3 of sandbox /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/inputs/debugFiles.tgz completed
+DEBUG 2026-02-22 20:31:57.614 UTC: 	 make sure that object is ready for retrieve
+DEBUG 2026-02-22 20:31:58.616 UTC: 	 Encoded data for curl request: subresource=download&objecttype=sandbox&tarballname=686b6ef00f4099c658742448c2e155ac3138db6125f92aff222d57a2b928d483.tar.gz&clientmethod=head_object
+DEBUG 2026-02-22 20:31:58.656 UTC: 	 PreSignedUrl to download sandbox received OK
+DEBUG 2026-02-22 20:31:58.660 UTC: 	 Will execute:
+ curl -v -s -f -o /dev/null --head  "https://s3.cern.ch/crabcache_prod/kkeshav/sandboxes/686b6ef00f4099c658742448c2e155ac3138db6125f92aff222d57a2b928d483.tar.gz?AWSAccessKeyId=715203df6482458ba839e73e6dab634b&Signature=PCks1OpGUA%2BUU4q16BQwgTbUdIg%3D&Expires=1771795918"
+DEBUG 2026-02-22 20:31:58.686 UTC: 	 exitcode: 0
+stdout: b''
+DEBUG 2026-02-22 20:31:58.686 UTC: 	 sandbox /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/inputs/debugFiles.tgz successfully uploaded to S3
+DEBUG 2026-02-22 20:31:58.686 UTC: 	 Result uploading input files: 9bb12e692b4ec99277660671330bd54a3bee58657524acdf485b6129b79e5c14.tar.gz 
+DEBUG 2026-02-22 20:31:58.687 UTC: 	 submit() - self.configuration from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.transferLogs = True
+config.General.workArea = 'crabLogs'
+config.General.requestName = 'Run2025D_muon0_v2'
+config.section_('JobType')
+config.JobType.psetName = 'run_GE21ana.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.numCores = 1
+config.section_('Data')
+config.Data.inputDataset = '/Muon0/Run2025D-ZMu-PromptReco-v1/RAW-RECO'
+config.Data.unitsPerJob = 1
+config.Data.splitting = 'FileBased'
+config.Data.inputDBS = 'global'
+config.Data.outLFNDirBase = '/store/group/alca_muonalign/kkeshav/'
+config.Data.outputDatasetTag = 'Before_alginment'
+config.Data.publication = False
+config.section_('Site')
+config.Site.storageSite = 'T3_CH_CERNBOX'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2026-02-22 20:31:58.687 UTC: 	 submit() - self.configreq {'dryrun': 0, 'workflow': 'crab_Run2025D_muon0_v2', 'saveoutput': 1, 'savelogsflag': 1, 'inputdata': '/Muon0/Run2025D-ZMu-PromptReco-v1/RAW-RECO', 'nonvaliddata': 0, 'userfiles': [], 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'useparent': 0, 'ignorelocality': 0, 'splitalgo': 'FileBased', 'algoargs': 1, 'totalunits': 0, 'lfn': '/store/group/alca_muonalign/kkeshav/', 'publication': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'publishname2': 'Before_alginment', 'jobtype': 'Analysis', 'generator': 'pythia', 'addoutputfiles': [], 'maxjobruntime': 1250, 'numcores': 1, 'maxmemory': 2000, 'priority': 10, 'nonprodsw': 0, 'asyncdest': 'T3_CH_CERNBOX', 'requireaccelerator': 0, 'oneEventMode': 0, 'extrajdl': [], 'ignoreglobalblacklist': 0, 'partialdataset': 0, 'inputblocks': []}
+DEBUG 2026-02-22 20:31:58.687 UTC: 	 submit() - jobconfig {'addoutputfiles': [], 'tfileoutfiles': ['output_test.root'], 'edmoutfiles': [], 'jobarch': 'el8_amd64_gcc12', 'jobminuarch': 'x86-64-v3', 'jobsw': 'CMSSW_15_1_0', 'inputdata': '/Muon0/Run2025D-ZMu-PromptReco-v1/RAW-RECO', 'cachefilename': '9bb12e692b4ec99277660671330bd54a3bee58657524acdf485b6129b79e5c14.tar.gz', 'debugfilename': '686b6ef00f4099c658742448c2e155ac3138db6125f92aff222d57a2b928d483.tar.gz', 'jobtype': 'Analysis'}
+INFO 2026-02-22 20:31:58.687 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2026-02-22 20:31:58.687 UTC: 	 Submitting {'dryrun': 0, 'workflow': 'crab_Run2025D_muon0_v2', 'saveoutput': 1, 'savelogsflag': 1, 'inputdata': '/Muon0/Run2025D-ZMu-PromptReco-v1/RAW-RECO', 'nonvaliddata': 0, 'userfiles': [], 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'useparent': 0, 'ignorelocality': 0, 'splitalgo': 'FileBased', 'algoargs': 1, 'totalunits': 0, 'lfn': '/store/group/alca_muonalign/kkeshav/', 'publication': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'publishname2': 'Before_alginment', 'jobtype': 'Analysis', 'generator': 'pythia', 'addoutputfiles': [], 'maxjobruntime': 1250, 'numcores': 1, 'maxmemory': 2000, 'priority': 10, 'nonprodsw': 0, 'asyncdest': 'T3_CH_CERNBOX', 'requireaccelerator': 0, 'oneEventMode': 0, 'extrajdl': [], 'ignoreglobalblacklist': 0, 'partialdataset': 0, 'inputblocks': [], 'tfileoutfiles': ['output_test.root'], 'edmoutfiles': [], 'jobarch': 'el8_amd64_gcc12', 'jobminuarch': 'x86-64-v3', 'jobsw': 'CMSSW_15_1_0', 'cachefilename': '9bb12e692b4ec99277660671330bd54a3bee58657524acdf485b6129b79e5c14.tar.gz', 'debugfilename': '686b6ef00f4099c658742448c2e155ac3138db6125f92aff222d57a2b928d483.tar.gz'} 
+DEBUG 2026-02-22 20:31:58.687 UTC: 	 Encoded data for curl request: dryrun=0&workflow=crab_Run2025D_muon0_v2&saveoutput=1&savelogsflag=1&inputdata=%2FMuon0%2FRun2025D-ZMu-PromptReco-v1%2FRAW-RECO&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&useparent=0&ignorelocality=0&splitalgo=FileBased&algoargs=1&totalunits=0&lfn=%2Fstore%2Fgroup%2Falca_muonalign%2Fkkeshav%2F&publication=0&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&publishname2=Before_alginment&jobtype=Analysis&generator=pythia&maxjobruntime=1250&numcores=1&maxmemory=2000&priority=10&nonprodsw=0&asyncdest=T3_CH_CERNBOX&requireaccelerator=0&oneEventMode=0&ignoreglobalblacklist=0&partialdataset=0&jobarch=el8_amd64_gcc12&jobminuarch=x86-64-v3&jobsw=CMSSW_15_1_0&cachefilename=9bb12e692b4ec99277660671330bd54a3bee58657524acdf485b6129b79e5c14.tar.gz&debugfilename=686b6ef00f4099c658742448c2e155ac3138db6125f92aff222d57a2b928d483.tar.gz&tfileoutfiles=output_test.root
+DEBUG 2026-02-22 20:31:58.774 UTC: 	 Result: {'result': [{'RequestName': '260222_203158:kkeshav_crab_Run2025D_muon0_v2'}]}
+INFO 2026-02-22 20:31:58.778 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2026-02-22 20:31:58.778 UTC: 	 Task name: 260222_203158:kkeshav_crab_Run2025D_muon0_v2
+INFO 2026-02-22 20:31:58.778 UTC: 	 Project dir: crabLogs/crab_Run2025D_muon0_v2
+INFO 2026-02-22 20:31:58.778 UTC: 	 Please use ' crab status -d crabLogs/crab_Run2025D_muon0_v2 ' to check how the submission process proceeds.
+DEBUG 2026-02-22 20:31:58.778 UTC: 	 About to return
+INFO 2026-02-22 20:31:58.782 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/crab.log
+DEBUG 2026-02-22 20:35:02.792 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 20:35:02.792 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 20:35:02.792 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 20:35:02.792 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 20:35:02.792 UTC: 	 Executing command: 'status'
+DEBUG 2026-02-22 20:35:02.792 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+DEBUG 2026-02-22 20:35:02.798 UTC: 	 Checking credentials
+DEBUG 2026-02-22 20:35:02.798 UTC: 	 Found proxy file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:35:02.798 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2026-02-22 20:35:02.798 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:35:02.839 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:35:02.839 UTC: 	 Getting proxy life time left
+DEBUG 2026-02-22 20:35:02.839 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:35:02.865 UTC: 	 output : 33206
+33206
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:35:02.865 UTC: 	 Proxy valid for 09:13:26 hours
+DEBUG 2026-02-22 20:35:02.866 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2026-02-22 20:35:02.912 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2026-02-22 20:35:02.912 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:35:02.939 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:35:02.939 UTC: 	 Getting myproxy life time left for 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-02-22 20:35:02.939 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-02-22 20:35:03.397 UTC: 	 output : username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+  renewal policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 531:47:15  (22.2 days)
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:35:03.397 UTC: 	 Myproxy is valid: 1914420
+DEBUG 2026-02-22 20:35:03.397 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc  - validity: 22 days, 3:47:00
+DEBUG 2026-02-22 20:35:03.397 UTC: 	 Retrieving username ...
+DEBUG 2026-02-22 20:35:03.397 UTC: 	 Retrieving username from CRIC...
+DEBUG 2026-02-22 20:35:04.262 UTC: 	 username is kkeshav
+INFO 2026-02-22 20:35:05.457 UTC: 	 Rucio client intialized for account kkeshav
+DEBUG 2026-02-22 20:35:05.457 UTC: 	 Command use: status
+DEBUG 2026-02-22 20:35:05.457 UTC: 	 Options use: ['-d', 'crabLogs/crab_Run2025D_muon0_v2']
+DEBUG 2026-02-22 20:35:05.457 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2026-02-22 20:35:05.501 UTC: 	 CRABClient version: v3.251020
+DEBUG 2026-02-22 20:35:05.501 UTC: 	 Instance is prod
+DEBUG 2026-02-22 20:35:05.501 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2026-02-22 20:35:05.501 UTC: 	 Command api workflow
+DEBUG 2026-02-22 20:35:05.501 UTC: 	 Encoded data for curl request: subresource=search&workflow=260222_203158%3Akkeshav_crab_Run2025D_muon0_v2
+DEBUG 2026-02-22 20:35:05.545 UTC: 	 Got information from server oracle database: {'desc': {'columns': ['tm_taskname', 'tm_activity', 'tm_task_status', 'tm_task_command', 'tm_start_time', 'tm_start_injection', 'tm_end_injection', 'tm_task_failure', 'tm_job_sw', 'tm_job_arch', 'tm_input_dataset', 'tm_nonvalid_input_dataset', 'tm_use_parent', 'tm_site_whitelist', 'tm_site_blacklist', 'tm_split_algo', 'tm_split_args', 'tm_user_sandbox', 'tm_cache_url', 'tm_username', 'tm_user_dn', 'tm_user_vo', 'tm_user_role', 'tm_user_group', 'tm_publish_name', 'tm_publish_groupname', 'tm_asyncdest', 'tm_dbs_url', 'tm_publish_dbs_url', 'tm_publication', 'tm_outfiles', 'tm_tfile_outfiles', 'tm_edm_outfiles', 'tm_job_type', 'tm_generator', 'tm_events_per_lumi', 'tm_arguments', 'tm_save_logs', 'tw_name', 'tm_user_infiles', 'tm_maxjobruntime', 'tm_numcores', 'tm_maxmemory', 'tm_priority', 'tm_output_dataset', 'tm_task_warnings', 'tm_user_webdir', 'tm_scriptexe', 'tm_scriptargs', 'tm_extrajdl', 'tm_collector', 'tm_schedd', 'tm_dry_run', 'tm_user_files', 'tm_transfer_outputs', 'tm_output_lfn', 'tm_ignore_locality', 'tm_fail_limit', 'tm_one_event_mode', 'tm_secondary_input_dataset', 'tm_primary_dataset', 'tm_last_publication', 'tm_debug_files', 'clusterid', 'tm_ignore_global_blacklist', 'tm_submitter_ip_addr', 'tm_totalunits', 'tm_ddm_reqid', 'tm_user_config', 'tm_transfer_container', 'tm_transfer_rule', 'tm_publish_rule', 'tm_multipub_rule', 'tm_job_min_microarch', 'tm_dagman_status', 'tm_num_jobs', 'tm_uploaded']}, 'result': ['260222_203158:kkeshav_crab_Run2025D_muon0_v2', 'None', 'SUBMITFAILED', 'SUBMIT', '2026-02-22 20:31:58.763825', 'None', '2026-02-22 20:33:28.889883', 'lfn2pfn resolution with Rucio failed for site: T3_CH_CERNBOX  LFN: /store/group/alca_muonalign/kkeshav/260222203158kkeshavcrabun2025muon0v2_crab3check.tmp with exception(s) :\noperation: third_party_copy_write, exception: An unknown exception occurred.\nDetails: no error information passed (http status code: 500)\n', 'CMSSW_15_1_0', 'el8_amd64_gcc12', '/Muon0/Run2025D-ZMu-PromptReco-v1/RAW-RECO', 'F', '0', '[]', '[]', 'FileBased', "{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", '9bb12e692b4ec99277660671330bd54a3bee58657524acdf485b6129b79e5c14.tar.gz', 'S3/crabcache_prod', 'kkeshav', '/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav', 'cms', 'None', 'None', 'Before_alginment-00000000000000000000000000000000', 'F', 'T3_CH_CERNBOX', 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'F', '[]', "['output_test.root']", '[]', 'Analysis', 'pythia', 'None', '{}', 'T', 'crab-prod-tw01', '[]', '1250', '1', '2000', '10', 'None', '[]', 'None', 'None', '[]', '[]', 'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', 'None', 'F', '[]', 'T', '/store/group/alca_muonalign/kkeshav/', 'F', 'None', 'F', 'None', 'Muon0', 'None', '686b6ef00f4099c658742448c2e155ac3138db6125f92aff222d57a2b928d483.tar.gz', 'None', 'F', '188.185.101.116', '0.0', 'None', '{"partialdataset": false, "requireaccelerator": false, "acceleratorparams": null, "inputblocks": null}', 'None', 'None', 'None', 'None', 'x86-64-v3', 'NOT_READY', '0', 'F']}
+INFO 2026-02-22 20:35:05.545 UTC: 	 CRAB project directory:		/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2
+INFO 2026-02-22 20:35:05.545 UTC: 	 Task name:			260222_203158:kkeshav_crab_Run2025D_muon0_v2
+INFO 2026-02-22 20:35:05.545 UTC: 	 Grid scheduler - Task Worker:	N/A yet - crab-prod-tw01
+INFO 2026-02-22 20:35:05.545 UTC: 	 Status on the CRAB server:	SUBMITFAILED
+INFO 2026-02-22 20:35:05.545 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/260222_203158%3Akkeshav_crab_Run2025D_muon0_v2
+INFO 2026-02-22 20:35:05.553 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=kkeshav&var-task=260222_203158%3Akkeshav_crab_Run2025D_muon0_v2&from=1771788718000&to=now
+ERROR 2026-02-22 20:35:05.553 UTC: 	 Failure message from server:	lfn2pfn resolution with Rucio failed for site: T3_CH_CERNBOX  LFN: /store/group/alca_muonalign/kkeshav/260222203158kkeshavcrabun2025muon0v2_crab3check.tmp with exception(s) :
+				operation: third_party_copy_write, exception: An unknown exception occurred.
+				Details: no error information passed (http status code: 500)
+				
+DEBUG 2026-02-22 20:35:05.553 UTC: 	 The task has not been submitted to the Grid scheduler yet. Not printing job information.
+INFO 2026-02-22 20:35:05.554 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v2/crab.log

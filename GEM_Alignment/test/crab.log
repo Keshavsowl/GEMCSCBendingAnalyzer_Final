@@ -1,0 +1,950 @@
+DEBUG 2025-12-25 00:58:04.928 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2025-12-25 00:58:04.928 UTC: 	 Running on: Linux lxplus800.cern.ch 4.18.0-553.83.1.el8_10.x86_64 #1 SMP Fri Oct 31 03:39:01 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-12-25 00:58:04.928 UTC: 	 Not using Singularity
+DEBUG 2025-12-25 00:58:04.928 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2025-12-25 00:58:04.928 UTC: 	 Executing command: 'submit'
+DEBUG 2025-12-25 00:58:04.929 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2025-12-25 00:58:04.937 UTC: 	 Will use CRAB configuration file crab_mc.py
+DEBUG 2025-12-25 00:58:04.938 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-12-25 00:58:04.940 UTC: 	 Error while loading CRAB configuration:
+invalid syntax (crab_mc.py, line 35)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-12-25 00:58:04.940 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab_mc.py", line 35
+    ~                                    
+                                         ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 359, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab_mc.py
+Due to error:
+invalid syntax (crab_mc.py, line 35)Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab_mc.py", line 35
+    ~                                    
+                                         ^
+SyntaxError: invalid syntax
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 90, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+invalid syntax (crab_mc.py, line 35)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-12-25 00:58:04.942 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2025-12-25 00:58:38.895 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2025-12-25 00:58:38.895 UTC: 	 Running on: Linux lxplus800.cern.ch 4.18.0-553.83.1.el8_10.x86_64 #1 SMP Fri Oct 31 03:39:01 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-12-25 00:58:38.895 UTC: 	 Not using Singularity
+DEBUG 2025-12-25 00:58:38.895 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2025-12-25 00:58:38.895 UTC: 	 Executing command: 'submit'
+DEBUG 2025-12-25 00:58:38.895 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2025-12-25 00:58:38.896 UTC: 	 Will use CRAB configuration file crab_mc.py
+DEBUG 2025-12-25 00:58:38.896 UTC: 	 Loading CRAB configuration file.
+ERROR 2025-12-25 00:58:38.898 UTC: 	 Error while loading CRAB configuration:
+invalid syntax (crab_mc.py, line 35)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-12-25 00:58:38.898 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab_mc.py", line 35
+    ~                                    
+                                         ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 359, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab_mc.py
+Due to error:
+invalid syntax (crab_mc.py, line 35)Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab_mc.py", line 35
+    ~                                    
+                                         ^
+SyntaxError: invalid syntax
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 90, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+invalid syntax (crab_mc.py, line 35)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-12-25 00:58:38.900 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2025-12-25 01:00:14.574 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2025-12-25 01:00:14.575 UTC: 	 Running on: Linux lxplus800.cern.ch 4.18.0-553.83.1.el8_10.x86_64 #1 SMP Fri Oct 31 03:39:01 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-12-25 01:00:14.575 UTC: 	 Not using Singularity
+DEBUG 2025-12-25 01:00:14.575 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2025-12-25 01:00:14.575 UTC: 	 Executing command: 'submit'
+DEBUG 2025-12-25 01:00:14.575 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2025-12-25 01:00:14.575 UTC: 	 Will use CRAB configuration file crab_mc.py
+DEBUG 2025-12-25 01:00:14.575 UTC: 	 Loading CRAB configuration file.
+DEBUG 2025-12-25 01:00:14.580 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2025-12-25 01:00:14.580 UTC: 	 Invalid CRAB configuration:
+ when a userInputFiles list is indicated without an inputDataset
+ a valid site white list must be specified using the Site.whitelist parameter
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2025-12-25 01:00:14.580 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 95, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration:
+ when a userInputFiles list is indicated without an inputDataset
+ a valid site white list must be specified using the Site.whitelist parameter
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2025-12-25 01:00:14.582 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2025-12-25 01:04:35.194 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2025-12-25 01:04:35.194 UTC: 	 Running on: Linux lxplus800.cern.ch 4.18.0-553.83.1.el8_10.x86_64 #1 SMP Fri Oct 31 03:39:01 EDT 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2025-12-25 01:04:35.194 UTC: 	 Not using Singularity
+DEBUG 2025-12-25 01:04:35.194 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2025-12-25 01:04:35.194 UTC: 	 Executing command: 'submit'
+DEBUG 2025-12-25 01:04:35.194 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2025-12-25 01:04:35.195 UTC: 	 Will use CRAB configuration file crab_mc.py
+DEBUG 2025-12-25 01:04:35.195 UTC: 	 Loading CRAB configuration file.
+DEBUG 2025-12-25 01:04:35.195 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2025-12-25 01:04:35.195 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_2025__mc' already exists 
+Please change the requestName in the config file
+ERROR 2025-12-25 01:04:35.195 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_2025__mc' already exists 
+Please change the requestName in the config file
+INFO 2025-12-25 01:04:35.197 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-01-09 11:18:06.033 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-01-09 11:18:06.033 UTC: 	 Running on: Linux lxplus807.cern.ch 4.18.0-553.85.1.el8_10.x86_64 #1 SMP Thu Nov 13 12:55:12 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-01-09 11:18:06.034 UTC: 	 Not using Singularity
+DEBUG 2026-01-09 11:18:06.034 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-01-09 11:18:06.034 UTC: 	 Executing command: 'submit'
+DEBUG 2026-01-09 11:18:06.034 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-01-09 11:18:06.034 UTC: 	 Will use CRAB configuration file crab_mc.py
+DEBUG 2026-01-09 11:18:06.034 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-01-09 11:18:06.047 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-01-09 11:18:06.047 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_2025mc_v2' already exists 
+Please change the requestName in the config file
+ERROR 2026-01-09 11:18:06.047 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_2025mc_v2' already exists 
+Please change the requestName in the config file
+INFO 2026-01-09 11:18:06.126 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-01-21 01:25:24.251 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-01-21 01:25:24.252 UTC: 	 Running on: Linux lxplus805.cern.ch 4.18.0-553.94.1.el8_10.x86_64 #1 SMP Tue Jan 13 00:47:51 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-01-21 01:25:24.252 UTC: 	 Not using Singularity
+DEBUG 2026-01-21 01:25:24.252 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-01-21 01:25:24.252 UTC: 	 Executing command: 'status'
+DEBUG 2026-01-21 01:25:24.252 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+ERROR 2026-01-21 01:25:24.254 UTC: 	 Error: crab_projects/crab_SingleMuPt30to50_DIGI_v3 is not a valid CRAB project directory.
+ERROR 2026-01-21 01:25:24.254 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/status.py", line 50, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: crab_projects/crab_SingleMuPt30to50_DIGI_v3 is not a valid CRAB project directory.
+INFO 2026-01-21 01:25:24.262 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-01-21 07:14:04.207 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-01-21 07:14:04.208 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-01-21 07:14:04.208 UTC: 	 Not using Singularity
+DEBUG 2026-01-21 07:14:04.208 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-01-21 07:14:04.208 UTC: 	 Executing command: 'submit'
+DEBUG 2026-01-21 07:14:04.208 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-01-21 07:14:04.209 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana_v1.py
+DEBUG 2026-01-21 07:14:04.209 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-01-21 07:14:04.210 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-01-21 07:14:04.210 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_GE21_Alignment_MC_2025_v2' already exists 
+Please change the requestName in the config file
+ERROR 2026-01-21 07:14:04.210 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_GE21_Alignment_MC_2025_v2' already exists 
+Please change the requestName in the config file
+INFO 2026-01-21 07:14:04.214 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-01-31 22:46:03.903 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-01-31 22:46:03.903 UTC: 	 Running on: Linux lxplus802.cern.ch 4.18.0-553.94.1.el8_10.x86_64 #1 SMP Tue Jan 13 00:47:51 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-01-31 22:46:03.903 UTC: 	 Not using Singularity
+DEBUG 2026-01-31 22:46:03.903 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-01-31 22:46:03.903 UTC: 	 Executing command: 'submit'
+DEBUG 2026-01-31 22:46:03.903 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-01-31 22:46:03.905 UTC: 	 Will use CRAB configuration file run_GE21ana_v1.py
+DEBUG 2026-01-31 22:46:03.905 UTC: 	 Loading CRAB configuration file.
+ERROR 2026-01-31 22:46:18.868 UTC: 	 Error while loading CRAB configuration:
+Unknown command
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2026-01-31 22:46:18.868 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/run_GE21ana_v1.py", line 85, in <module>
+    options.parseArguments()
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/cms/cmssw/CMSSW_15_1_0/src/FWCore/ParameterSet/python/VarParsing.py", line 245, in parseArguments
+    raise RuntimeError("Unknown command")
+RuntimeError: Unknown command
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 359, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/run_GE21ana_v1.py
+Due to error:
+Unknown commandTraceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/run_GE21ana_v1.py", line 85, in <module>
+    options.parseArguments()
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/cms/cmssw/CMSSW_15_1_0/src/FWCore/ParameterSet/python/VarParsing.py", line 245, in parseArguments
+    raise RuntimeError("Unknown command")
+RuntimeError: Unknown command
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 90, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+Unknown command
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2026-01-31 22:46:18.917 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-02-22 07:07:56.259 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 07:07:56.259 UTC: 	 Running on: Linux lxplus808.cern.ch 4.18.0-553.92.1.el8_10.x86_64 #1 SMP Tue Jan 6 00:53:45 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 07:07:56.259 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 07:07:56.259 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 07:07:56.259 UTC: 	 Executing command: 'submit'
+DEBUG 2026-02-22 07:07:56.260 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-02-22 07:07:56.260 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana_v2.py
+DEBUG 2026-02-22 07:07:56.260 UTC: 	 Loading CRAB configuration file.
+ERROR 2026-02-22 07:07:56.265 UTC: 	 Error while loading CRAB configuration:
+invalid syntax (crab3_run_GE21ana_v2.py, line 45)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2026-02-22 07:07:56.265 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab3_run_GE21ana_v2.py", line 45
+    config.Site.whitelist = ['T2_CH_CERN'i]
+                                         ^
+SyntaxError: invalid syntax
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 359, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab3_run_GE21ana_v2.py
+Due to error:
+invalid syntax (crab3_run_GE21ana_v2.py, line 45)Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab3_run_GE21ana_v2.py", line 45
+    config.Site.whitelist = ['T2_CH_CERN'i]
+                                         ^
+SyntaxError: invalid syntax
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 90, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+invalid syntax (crab3_run_GE21ana_v2.py, line 45)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2026-02-22 07:07:56.358 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-02-22 20:25:02.179 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 20:25:02.179 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 20:25:02.179 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 20:25:02.180 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 20:25:02.180 UTC: 	 Executing command: 'submit'
+DEBUG 2026-02-22 20:25:02.180 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-02-22 20:25:02.183 UTC: 	 Will use CRAB configuration file run_GE21ana.py
+DEBUG 2026-02-22 20:25:02.183 UTC: 	 Loading CRAB configuration file.
+ERROR 2026-02-22 20:25:09.041 UTC: 	 Error while loading CRAB configuration:
+Unknown command
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2026-02-22 20:25:09.041 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/run_GE21ana.py", line 85, in <module>
+    options.parseArguments()
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/cms/cmssw/CMSSW_15_1_0/src/FWCore/ParameterSet/python/VarParsing.py", line 245, in parseArguments
+    raise RuntimeError("Unknown command")
+RuntimeError: Unknown command
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 56, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 359, in loadConfigurationFile
+    raise RuntimeError(msg)
+RuntimeError: Unable to load Configuration File:
+/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/run_GE21ana.py
+Due to error:
+Unknown commandTraceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/WMCore/Configuration.py", line 352, in loadConfigurationFile
+    modRef = load_module(cfgBaseName, modPath)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/__init__.py", line 38, in load_module
+    return imp.load_module(moduleName, moduleObj[0],
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 234, in load_module
+    return load_source(name, filename, file)
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/external/python3/3.9.14-ccc34bac15aa449b4c76ba24d02d2fd7/lib/python3.9/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/run_GE21ana.py", line 85, in <module>
+    options.parseArguments()
+  File "/cvmfs/cms.cern.ch/el8_amd64_gcc12/cms/cmssw/CMSSW_15_1_0/src/FWCore/ParameterSet/python/VarParsing.py", line 245, in parseArguments
+    raise RuntimeError("Unknown command")
+RuntimeError: Unknown command
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 326, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 90, in loadConfig
+    raise ConfigurationException(configmsg)
+CRABClient.ClientExceptions.ConfigurationException: Error while loading CRAB configuration:
+Unknown command
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3FAQ
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+INFO 2026-02-22 20:25:09.063 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-02-22 20:25:45.279 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 20:25:45.279 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 20:25:45.279 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 20:25:45.279 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 20:25:45.279 UTC: 	 Executing command: 'submit'
+DEBUG 2026-02-22 20:25:45.279 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-02-22 20:25:45.280 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-02-22 20:25:45.280 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-02-22 20:25:45.295 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-02-22 20:25:45.297 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0' already exists 
+Please change the requestName in the config file
+ERROR 2026-02-22 20:25:45.297 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0' already exists 
+Please change the requestName in the config file
+INFO 2026-02-22 20:25:45.299 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-02-22 20:31:20.725 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 20:31:20.725 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 20:31:20.725 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 20:31:20.725 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 20:31:20.725 UTC: 	 Executing command: 'submit'
+DEBUG 2026-02-22 20:31:20.726 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-02-22 20:31:20.726 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-02-22 20:31:20.726 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-02-22 20:31:20.735 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-02-22 20:31:20.736 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v1' already exists 
+Please change the requestName in the config file
+ERROR 2026-02-22 20:31:20.736 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v1' already exists 
+Please change the requestName in the config file
+INFO 2026-02-22 20:31:20.742 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-02-22 20:39:54.888 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 20:39:54.888 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 20:39:54.888 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 20:39:54.888 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 20:39:54.888 UTC: 	 Executing command: 'submit'
+DEBUG 2026-02-22 20:39:54.888 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-02-22 20:39:54.889 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-02-22 20:39:54.889 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-02-22 20:39:54.891 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-02-22 20:39:54.892 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v3' already exists 
+Please change the requestName in the config file
+ERROR 2026-02-22 20:39:54.892 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v3' already exists 
+Please change the requestName in the config file
+INFO 2026-02-22 20:39:54.899 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-02-22 20:50:01.318 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 20:50:01.318 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 20:50:01.318 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 20:50:01.318 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 20:50:01.318 UTC: 	 Executing command: 'submit'
+DEBUG 2026-02-22 20:50:01.319 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-02-22 20:50:01.319 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-02-22 20:50:01.319 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-02-22 20:50:01.320 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-02-22 20:50:01.320 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v6' already exists 
+Please change the requestName in the config file
+ERROR 2026-02-22 20:50:01.320 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v6' already exists 
+Please change the requestName in the config file
+INFO 2026-02-22 20:50:01.327 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-03-02 00:25:30.777 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-03-02 00:25:30.777 UTC: 	 Running on: Linux lxplus802.cern.ch 4.18.0-553.94.1.el8_10.x86_64 #1 SMP Tue Jan 13 00:47:51 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-03-02 00:25:30.777 UTC: 	 Not using Singularity
+DEBUG 2026-03-02 00:25:30.777 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-03-02 00:25:30.777 UTC: 	 Executing command: 'submit'
+DEBUG 2026-03-02 00:25:30.778 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-03-02 00:25:30.794 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-03-02 00:25:30.794 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-03-02 00:25:30.835 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-03-02 00:25:30.837 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v100' already exists 
+Please change the requestName in the config file
+ERROR 2026-03-02 00:25:30.837 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v100' already exists 
+Please change the requestName in the config file
+INFO 2026-03-02 00:25:30.883 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-03-02 01:30:17.159 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-03-02 01:30:17.159 UTC: 	 Running on: Linux lxplus802.cern.ch 4.18.0-553.94.1.el8_10.x86_64 #1 SMP Tue Jan 13 00:47:51 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-03-02 01:30:17.160 UTC: 	 Not using Singularity
+DEBUG 2026-03-02 01:30:17.160 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-03-02 01:30:17.160 UTC: 	 Executing command: 'submit'
+DEBUG 2026-03-02 01:30:17.160 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-03-02 01:30:17.165 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-03-02 01:30:17.165 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-03-02 01:30:17.173 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-03-02 01:30:17.173 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v1000' already exists 
+Please change the requestName in the config file
+ERROR 2026-03-02 01:30:17.173 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v1000' already exists 
+Please change the requestName in the config file
+INFO 2026-03-02 01:30:17.183 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-03-10 20:54:11.443 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-03-10 20:54:11.443 UTC: 	 Running on: Linux lxplus811.cern.ch 4.18.0-553.107.1.el8_10.x86_64 #1 SMP Tue Feb 17 05:52:05 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-03-10 20:54:11.444 UTC: 	 Not using Singularity
+DEBUG 2026-03-10 20:54:11.444 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-03-10 20:54:11.444 UTC: 	 Executing command: 'submit'
+DEBUG 2026-03-10 20:54:11.445 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-03-10 20:54:11.458 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-03-10 20:54:11.458 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-03-10 20:54:11.488 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-03-10 20:54:11.491 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0' already exists 
+Please change the requestName in the config file
+ERROR 2026-03-10 20:54:11.491 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0' already exists 
+Please change the requestName in the config file
+INFO 2026-03-10 20:54:11.505 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-03-10 20:59:13.998 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-03-10 20:59:13.998 UTC: 	 Running on: Linux lxplus811.cern.ch 4.18.0-553.107.1.el8_10.x86_64 #1 SMP Tue Feb 17 05:52:05 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-03-10 20:59:13.998 UTC: 	 Not using Singularity
+DEBUG 2026-03-10 20:59:13.998 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-03-10 20:59:13.998 UTC: 	 Executing command: 'submit'
+DEBUG 2026-03-10 20:59:13.998 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-03-10 20:59:13.999 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-03-10 20:59:13.999 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-03-10 20:59:14.000 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-03-10 20:59:14.000 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v01' already exists 
+Please change the requestName in the config file
+ERROR 2026-03-10 20:59:14.000 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v01' already exists 
+Please change the requestName in the config file
+INFO 2026-03-10 20:59:14.008 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-04-18 21:23:05.578 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-04-18 21:23:05.578 UTC: 	 Running on: Linux lxplus808.cern.ch 4.18.0-553.111.1.el8_10.x86_64 #1 SMP Sat Feb 28 00:49:56 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-04-18 21:23:05.578 UTC: 	 Not using Singularity
+DEBUG 2026-04-18 21:23:05.578 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-04-18 21:23:05.578 UTC: 	 Executing command: 'submit'
+DEBUG 2026-04-18 21:23:05.578 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-04-18 21:23:05.579 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana_v2.py
+DEBUG 2026-04-18 21:23:05.579 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-04-18 21:23:05.579 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-04-18 21:23:05.580 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v13' already exists 
+Please change the requestName in the config file
+ERROR 2026-04-18 21:23:05.580 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v13' already exists 
+Please change the requestName in the config file
+INFO 2026-04-18 21:23:05.723 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-04-19 19:07:59.807 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-04-19 19:07:59.807 UTC: 	 Running on: Linux lxplus805.cern.ch 4.18.0-553.111.1.el8_10.x86_64 #1 SMP Sat Feb 28 00:49:56 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-04-19 19:07:59.807 UTC: 	 Not using Singularity
+DEBUG 2026-04-19 19:07:59.807 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-04-19 19:07:59.807 UTC: 	 Executing command: 'submit'
+DEBUG 2026-04-19 19:07:59.807 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-04-19 19:07:59.857 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana_v2.py
+DEBUG 2026-04-19 19:07:59.857 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-04-19 19:07:59.879 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-04-19 19:07:59.880 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v18' already exists 
+Please change the requestName in the config file
+ERROR 2026-04-19 19:07:59.880 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v18' already exists 
+Please change the requestName in the config file
+INFO 2026-04-19 19:07:59.901 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-04-19 19:15:04.500 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-04-19 19:15:04.500 UTC: 	 Running on: Linux lxplus805.cern.ch 4.18.0-553.111.1.el8_10.x86_64 #1 SMP Sat Feb 28 00:49:56 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-04-19 19:15:04.500 UTC: 	 Not using Singularity
+DEBUG 2026-04-19 19:15:04.500 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-04-19 19:15:04.500 UTC: 	 Executing command: 'status'
+DEBUG 2026-04-19 19:15:04.500 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+ERROR 2026-04-19 19:15:04.501 UTC: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v19
+ERROR 2026-04-19 19:15:04.501 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/status.py", line 50, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 695, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 537, in loadLocalCache
+    raise ex
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 531, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CRABClient.ClientExceptions.CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v19
+INFO 2026-04-19 19:15:04.506 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-04-19 19:28:24.157 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-04-19 19:28:24.157 UTC: 	 Running on: Linux lxplus805.cern.ch 4.18.0-553.111.1.el8_10.x86_64 #1 SMP Sat Feb 28 00:49:56 EST 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-04-19 19:28:24.157 UTC: 	 Not using Singularity
+DEBUG 2026-04-19 19:28:24.157 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-04-19 19:28:24.157 UTC: 	 Executing command: 'submit'
+DEBUG 2026-04-19 19:28:24.157 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-04-19 19:28:24.158 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana_v2.py
+DEBUG 2026-04-19 19:28:24.158 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-04-19 19:28:24.159 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-04-19 19:28:24.159 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v20' already exists 
+Please change the requestName in the config file
+ERROR 2026-04-19 19:28:24.159 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v20' already exists 
+Please change the requestName in the config file
+INFO 2026-04-19 19:28:24.161 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-05-06 00:53:10.318 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-05-06 00:53:10.319 UTC: 	 Running on: Linux lxplus804.cern.ch 4.18.0-553.120.1.el8_10.x86_64 #1 SMP Wed Apr 8 22:26:17 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-05-06 00:53:10.319 UTC: 	 Not using Singularity
+DEBUG 2026-05-06 00:53:10.319 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-05-06 00:53:10.319 UTC: 	 Executing command: 'kill'
+DEBUG 2026-05-06 00:53:10.319 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+ERROR 2026-05-06 00:53:10.319 UTC: 	 Error: crab_Run2025C_muon0_v10 is not a valid CRAB project directory.
+ERROR 2026-05-06 00:53:10.320 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: crab_Run2025C_muon0_v10 is not a valid CRAB project directory.
+INFO 2026-05-06 00:53:10.338 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-05-06 02:23:31.537 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-05-06 02:23:31.538 UTC: 	 Running on: Linux lxplus805.cern.ch 4.18.0-553.120.1.el8_10.x86_64 #1 SMP Wed Apr 8 22:26:17 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-05-06 02:23:31.538 UTC: 	 Not using Singularity
+DEBUG 2026-05-06 02:23:31.538 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-05-06 02:23:31.538 UTC: 	 Executing command: 'status'
+DEBUG 2026-05-06 02:23:31.538 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+ERROR 2026-05-06 02:23:31.539 UTC: 	 Error: crab3_run_GE21ana.py is not a valid CRAB project directory.
+ERROR 2026-05-06 02:23:31.539 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/status.py", line 50, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 281, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 691, in validateOptions
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: [91mError[0m: crab3_run_GE21ana.py is not a valid CRAB project directory.
+INFO 2026-05-06 02:23:31.545 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-05-06 02:24:00.301 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-05-06 02:24:00.301 UTC: 	 Running on: Linux lxplus805.cern.ch 4.18.0-553.120.1.el8_10.x86_64 #1 SMP Wed Apr 8 22:26:17 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-05-06 02:24:00.301 UTC: 	 Not using Singularity
+DEBUG 2026-05-06 02:24:00.301 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-05-06 02:24:00.301 UTC: 	 Executing command: 'submit'
+DEBUG 2026-05-06 02:24:00.302 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-05-06 02:24:00.302 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-05-06 02:24:00.302 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-05-06 02:24:00.307 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-05-06 02:24:00.309 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v10' already exists 
+Please change the requestName in the config file
+ERROR 2026-05-06 02:24:00.309 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v10' already exists 
+Please change the requestName in the config file
+INFO 2026-05-06 02:24:00.311 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log
+DEBUG 2026-05-12 00:49:25.185 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-05-12 00:49:25.185 UTC: 	 Running on: Linux lxplus804.cern.ch 4.18.0-553.120.1.el8_10.x86_64 #1 SMP Wed Apr 8 22:26:17 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-05-12 00:49:25.185 UTC: 	 Not using Singularity
+DEBUG 2026-05-12 00:49:25.185 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-05-12 00:49:25.185 UTC: 	 Executing command: 'submit'
+DEBUG 2026-05-12 00:49:25.185 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-05-12 00:49:25.203 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana_v2.py
+DEBUG 2026-05-12 00:49:25.203 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-05-12 00:49:25.228 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+ERROR 2026-05-12 00:49:25.228 UTC: 	 Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v21' already exists 
+Please change the requestName in the config file
+ERROR 2026-05-12 00:49:25.229 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 135, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])  # the crab command to be executed
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 37, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/SubCommand.py", line 328, in __init__
+    self.requestarea, self.requestname, self.logfile = createWorkArea(
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/ClientUtilities.py", line 392, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+CRABClient.ClientExceptions.ConfigException: Working area '/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_SingleMuPt25to70_Alignment_v21' already exists 
+Please change the requestName in the config file
+INFO 2026-05-12 00:49:25.244 UTC: 	 Log file is /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crab.log

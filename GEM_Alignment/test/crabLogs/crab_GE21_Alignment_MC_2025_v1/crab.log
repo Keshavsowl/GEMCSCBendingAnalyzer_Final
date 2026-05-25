@@ -1,0 +1,105 @@
+DEBUG 2026-01-21 06:57:13.063 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-01-21 06:57:13.064 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-01-21 06:57:13.064 UTC: 	 Not using Singularity
+DEBUG 2026-01-21 06:57:13.064 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-01-21 06:57:13.064 UTC: 	 Executing command: 'submit'
+DEBUG 2026-01-21 06:57:13.064 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-01-21 06:57:13.066 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana_v1.py
+DEBUG 2026-01-21 06:57:13.066 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-01-21 06:57:13.071 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+DEBUG 2026-01-21 06:57:13.079 UTC: 	 Checking credentials
+DEBUG 2026-01-21 06:57:13.079 UTC: 	 Found proxy file /tmp/x509up_u171407
+DEBUG 2026-01-21 06:57:13.079 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2026-01-21 06:57:13.079 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u171407
+DEBUG 2026-01-21 06:57:13.149 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2026-01-21 06:57:13.149 UTC: 	 Getting proxy life time left
+DEBUG 2026-01-21 06:57:13.149 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u171407
+DEBUG 2026-01-21 06:57:13.179 UTC: 	 output : 691173
+691173
+
+ error: 
+ retcode : 0
+DEBUG 2026-01-21 06:57:13.179 UTC: 	 Proxy valid for 191:59:33 hours
+DEBUG 2026-01-21 06:57:13.179 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2026-01-21 06:57:13.271 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2026-01-21 06:57:13.271 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u171407
+DEBUG 2026-01-21 06:57:13.298 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+
+ error: 
+ retcode : 0
+DEBUG 2026-01-21 06:57:13.299 UTC: 	 Getting myproxy life time left for 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-01-21 06:57:13.299 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-01-21 06:57:13.622 UTC: 	 output : username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+  renewal policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 690:14:12  (28.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2026-01-21 06:57:13.622 UTC: 	 Myproxy is valid: 2484840
+DEBUG 2026-01-21 06:57:13.622 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc  - validity: 28 days, 18:14:00
+DEBUG 2026-01-21 06:57:13.622 UTC: 	 Command use: submit
+DEBUG 2026-01-21 06:57:13.622 UTC: 	 Options use: ['crab3_run_GE21ana_v1.py']
+DEBUG 2026-01-21 06:57:13.622 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2026-01-21 06:57:13.664 UTC: 	 CRABClient version: v3.251020
+DEBUG 2026-01-21 06:57:13.664 UTC: 	 Instance is prod
+DEBUG 2026-01-21 06:57:13.664 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2026-01-21 06:57:13.664 UTC: 	 Command api workflow
+DEBUG 2026-01-21 06:57:13.664 UTC: 	 Started submission
+DEBUG 2026-01-21 06:57:13.664 UTC: 	 Working on /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_GE21_Alignment_MC_2025_v1
+DEBUG 2026-01-21 06:57:13.712 UTC: 	 Loading required information from the environment
+DEBUG 2026-01-21 06:57:13.713 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-01-21 06:57:13.713 UTC: 	 Loading required information from the environment
+DEBUG 2026-01-21 06:57:13.713 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-01-21 06:57:13.713 UTC: 	 UNIQUE NAME: tarUUID 58834871-781c-494a-bb4a-cbba502f3070 
+DEBUG 2026-01-21 06:57:13.713 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.requestName = 'GE21_Alignment_MC_2025_v1'
+config.General.transferOutputs = True
+config.General.transferLogs = True
+config.General.workArea = 'crabLogs'
+config.section_('JobType')
+config.JobType.psetName = 'run_GE21ana_v1.py'
+config.JobType.maxMemoryMB = 8000
+config.JobType.numCores = 4
+config.JobType.pluginName = 'Analysis'
+config.section_('Data')
+config.Data.outLFNDirBase = '/store/user/kkeshav/'
+config.Data.publication = False
+config.Data.splitting = 'FileBased'
+config.Data.outputPrimaryDataset = 'SingleMuPt30to50_2025_MC_v1'
+config.Data.unitsPerJob = 1
+config.Data.userInputFiles = ['root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_1.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_2.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_3.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_4.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_5.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_6.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_7.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_8.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_9.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_10.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_11.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_12.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_13.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_14.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_15.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_16.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_17.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_18.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_19.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_20.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_21.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_22.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_23.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_24.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_25.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_26.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_27.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_28.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_29.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_30.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_31.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_32.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_33.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_34.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_35.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_36.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_37.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_38.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_39.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_40.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_41.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_42.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_43.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_44.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_45.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_46.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_47.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_48.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_49.root', 'root://eosuser.cern.ch//eos/user/k/kkeshav/SingleMuPt30to50_2025_MC_v1/RECO_v1/260121_015824/0000/step3_2025_v1_50.root']
+config.Data.outputDatasetTag = 'MC_v1'
+config.Data.totalUnits = 50
+config.section_('Site')
+config.Site.storageSite = 'T3_CH_CERNBOX'
+config.Site.whitelist = ['T2_CH_CERN']
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2026-01-21 06:57:13.713 UTC: 	 self.config.JobType.psetName: run_GE21ana_v1.py
+INFO 2026-01-21 06:57:13.713 UTC: 	 Importing CMSSW configuration run_GE21ana_v1.py
+INFO 2026-01-21 06:57:24.123 UTC: 	 Finished importing CMSSW configuration run_GE21ana_v1.py
+ERROR 2026-01-21 06:57:24.123 UTC: 	 You specified config.JobType.numCores=4 in the crab configuration file but process.options.numberOfThreads=1. Please make sure the two parameters are consistent and have the same value (or they are both missing) in the crab configuration file and in the CMSSW PSet (run_GE21ana_v1.py)
+ERROR 2026-01-21 06:57:24.123 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 142, in __call__
+    returnDict = self.cmd()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 103, in __call__
+    dummy_inputfiles, jobconfig = plugjobtype.run()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/JobType/Analysis.py", line 99, in run
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: You specified config.JobType.numCores=4 in the crab configuration file but process.options.numberOfThreads=1. Please make sure the two parameters are consistent and have the same value (or they are both missing) in the crab configuration file and in the CMSSW PSet (run_GE21ana_v1.py)

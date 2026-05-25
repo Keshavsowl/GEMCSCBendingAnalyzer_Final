@@ -1,0 +1,74 @@
+DEBUG 2026-02-22 20:30:41.801 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-02-22 20:30:41.801 UTC: 	 Running on: Linux lxplus806.cern.ch 4.18.0-553.89.1.el8_10.x86_64 #1 SMP Sat Nov 29 00:49:18 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-02-22 20:30:41.801 UTC: 	 Not using Singularity
+DEBUG 2026-02-22 20:30:41.801 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-02-22 20:30:41.801 UTC: 	 Executing command: 'submit'
+DEBUG 2026-02-22 20:30:41.801 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-02-22 20:30:41.802 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-02-22 20:30:41.802 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-02-22 20:30:41.806 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+DEBUG 2026-02-22 20:30:41.812 UTC: 	 Checking credentials
+DEBUG 2026-02-22 20:30:41.812 UTC: 	 Found proxy file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:30:41.812 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2026-02-22 20:30:41.812 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:30:41.839 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:30:41.839 UTC: 	 Getting proxy life time left
+DEBUG 2026-02-22 20:30:41.839 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:30:41.858 UTC: 	 output : 33467
+33467
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:30:41.858 UTC: 	 Proxy valid for 09:17:47 hours
+DEBUG 2026-02-22 20:30:41.859 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2026-02-22 20:30:41.897 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2026-02-22 20:30:41.897 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u171407
+DEBUG 2026-02-22 20:30:41.922 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:30:41.922 UTC: 	 Getting myproxy life time left for 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-02-22 20:30:41.922 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-02-22 20:30:42.213 UTC: 	 output : username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+  renewal policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 531:51:36  (22.2 days)
+
+ error: 
+ retcode : 0
+DEBUG 2026-02-22 20:30:42.213 UTC: 	 Myproxy is valid: 1914660
+DEBUG 2026-02-22 20:30:42.213 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc  - validity: 22 days, 3:51:00
+DEBUG 2026-02-22 20:30:42.214 UTC: 	 Command use: submit
+DEBUG 2026-02-22 20:30:42.214 UTC: 	 Options use: ['crab3_run_GE21ana.py']
+DEBUG 2026-02-22 20:30:42.214 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2026-02-22 20:30:42.253 UTC: 	 CRABClient version: v3.251020
+DEBUG 2026-02-22 20:30:42.254 UTC: 	 Instance is prod
+DEBUG 2026-02-22 20:30:42.254 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2026-02-22 20:30:42.254 UTC: 	 Command api workflow
+DEBUG 2026-02-22 20:30:42.254 UTC: 	 Started submission
+DEBUG 2026-02-22 20:30:42.254 UTC: 	 Working on /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025D_muon0_v1
+ERROR 2026-02-22 20:30:42.284 UTC: 	 Invalid CRAB configuration: Analysis job type with input dataset does not accept an output primary dataset name to be specified, because the later will be extracted from the first.
+Suggestion: Remove the parameter Data.outputPrimaryDataset.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2026-02-22 20:30:42.284 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 142, in __call__
+    returnDict = self.cmd()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 102, in __call__
+    plugjobtype = crab_job_types[self.configreq['jobtype'].upper()](*pluginParams)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/JobType/BasicJobType.py", line 40, in __init__
+    raise ConfigurationException(msg)
+CRABClient.ClientExceptions.ConfigurationException: Invalid CRAB configuration: Analysis job type with input dataset does not accept an output primary dataset name to be specified, because the later will be extracted from the first.
+Suggestion: Remove the parameter Data.outputPrimaryDataset.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile

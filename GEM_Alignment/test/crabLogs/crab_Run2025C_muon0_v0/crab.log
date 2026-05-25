@@ -1,0 +1,555 @@
+DEBUG 2026-01-09 11:17:26.823 UTC: 	 CRAB Client version: v3.251020
+DEBUG 2026-01-09 11:17:26.823 UTC: 	 Running on: Linux lxplus807.cern.ch 4.18.0-553.85.1.el8_10.x86_64 #1 SMP Thu Nov 13 12:55:12 EST 2025 x86_64 x86_64 x86_64 GNU/Linux
+DEBUG 2026-01-09 11:17:26.823 UTC: 	 Not using Singularity
+DEBUG 2026-01-09 11:17:26.823 UTC: 	 Operating System: Red Hat Enterprise Linux 8.10 (Ootpa)
+DEBUG 2026-01-09 11:17:26.823 UTC: 	 Executing command: 'submit'
+DEBUG 2026-01-09 11:17:26.824 UTC: 	 Found CRAB cache file /afs/cern.ch/user/k/kkeshav/.crab3
+INFO 2026-01-09 11:17:26.825 UTC: 	 Will use CRAB configuration file crab3_run_GE21ana.py
+DEBUG 2026-01-09 11:17:26.825 UTC: 	 Loading CRAB configuration file.
+DEBUG 2026-01-09 11:17:26.830 UTC: 	 Will use CRAB plugin ANALYSIS (i.e. will run an analysis job type).
+DEBUG 2026-01-09 11:17:26.837 UTC: 	 Checking credentials
+DEBUG 2026-01-09 11:17:26.837 UTC: 	 Found proxy file /tmp/x509up_u171407
+DEBUG 2026-01-09 11:17:26.837 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2026-01-09 11:17:26.837 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u171407
+DEBUG 2026-01-09 11:17:26.858 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2026-01-09 11:17:26.858 UTC: 	 Getting proxy life time left
+DEBUG 2026-01-09 11:17:26.858 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u171407
+DEBUG 2026-01-09 11:17:26.874 UTC: 	 output : 46951
+46951
+
+ error: 
+ retcode : 0
+DEBUG 2026-01-09 11:17:26.875 UTC: 	 Proxy valid for 13:02:31 hours
+DEBUG 2026-01-09 11:17:26.875 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2026-01-09 11:17:26.913 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+DEBUG 2026-01-09 11:17:26.913 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u171407
+DEBUG 2026-01-09 11:17:26.930 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+
+ error: 
+ retcode : 0
+DEBUG 2026-01-09 11:17:26.930 UTC: 	 Getting myproxy life time left for 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-01-09 11:17:26.930 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+DEBUG 2026-01-09 11:17:27.195 UTC: 	 output : username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=kkeshav/CN=877143/CN=Keshav Keshav
+  renewal policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  trusted retrieval policy: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=cmscrab/CN=(817881|373708)/CN=Robot: cms crab|/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=crabint1/CN=373708/CN=Robot: CMS CRAB Integration 1
+  timeleft: 397:36:34  (16.6 days)
+
+ error: 
+ retcode : 0
+DEBUG 2026-01-09 11:17:27.195 UTC: 	 Myproxy is valid: 1431360
+DEBUG 2026-01-09 11:17:27.195 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 8fc5ffe2e6b33df3b145f390a39fac88325a14dc  - validity: 16 days, 13:36:00
+DEBUG 2026-01-09 11:17:27.195 UTC: 	 Command use: submit
+DEBUG 2026-01-09 11:17:27.195 UTC: 	 Options use: ['crab3_run_GE21ana.py']
+DEBUG 2026-01-09 11:17:27.196 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2026-01-09 11:17:27.227 UTC: 	 CRABClient version: v3.251020
+DEBUG 2026-01-09 11:17:27.227 UTC: 	 Instance is prod
+DEBUG 2026-01-09 11:17:27.227 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2026-01-09 11:17:27.227 UTC: 	 Command api workflow
+DEBUG 2026-01-09 11:17:27.227 UTC: 	 Started submission
+DEBUG 2026-01-09 11:17:27.227 UTC: 	 Working on /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0
+DEBUG 2026-01-09 11:17:27.252 UTC: 	 Loading required information from the environment
+DEBUG 2026-01-09 11:17:27.252 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-01-09 11:17:27.252 UTC: 	 Loading required information from the environment
+DEBUG 2026-01-09 11:17:27.252 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-01-09 11:17:27.253 UTC: 	 UNIQUE NAME: tarUUID daa55085-177f-4f68-a2c8-f2289f75a56a 
+DEBUG 2026-01-09 11:17:27.253 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.workArea = 'crabLogs'
+config.General.transferLogs = True
+config.General.requestName = 'Run2025C_muon0_v0'
+config.General.transferOutputs = True
+config.section_('JobType')
+config.JobType.pluginName = 'Analysis'
+config.JobType.numCores = 1
+config.JobType.psetName = 'run_GE21ana.py'
+config.section_('Data')
+config.Data.publication = False
+config.Data.inputDataset = '/Muon0/Run2025C-ZMu-PromptReco-v1/RAW-RECO'
+config.Data.outLFNDirBase = '/store/user/toakhter/tamu_mual/2025/2025C'
+config.Data.unitsPerJob = 1
+config.Data.outputDatasetTag = 'Run2025C_muon0_v0'
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.section_('Site')
+config.Site.storageSite = 'T3_CH_CERNBOX'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2026-01-09 11:17:27.253 UTC: 	 self.config.JobType.psetName: run_GE21ana.py
+INFO 2026-01-09 11:17:27.253 UTC: 	 Importing CMSSW configuration run_GE21ana.py
+INFO 2026-01-09 11:17:31.583 UTC: 	 Finished importing CMSSW configuration run_GE21ana.py
+DEBUG 2026-01-09 11:17:31.583 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/PSet.py
+DEBUG 2026-01-09 11:17:32.570 UTC: 	 The following EDM output files will be collected: []
+DEBUG 2026-01-09 11:17:32.570 UTC: 	 The following TFile output files will be collected: ['output_test.root']
+DEBUG 2026-01-09 11:17:32.570 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2026-01-09 11:17:32.570 UTC: 	 Loading required information from the environment
+DEBUG 2026-01-09 11:17:32.570 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-01-09 11:17:32.570 UTC: 	 Making tarball in /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/daa55085-177f-4f68-a2c8-f2289f75a56adefault.tgz
+DEBUG 2026-01-09 11:17:32.571 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/bin
+DEBUG 2026-01-09 11:17:32.571 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/bin to tarball
+DEBUG 2026-01-09 11:17:32.574 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/python
+DEBUG 2026-01-09 11:17:32.574 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/python to tarball
+DEBUG 2026-01-09 11:17:32.941 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/cfipython
+DEBUG 2026-01-09 11:17:32.941 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/cfipython to tarball
+DEBUG 2026-01-09 11:17:33.041 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/lib
+DEBUG 2026-01-09 11:17:33.041 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/lib to tarball
+DEBUG 2026-01-09 11:17:35.671 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/biglib
+DEBUG 2026-01-09 11:17:35.671 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/biglib to tarball
+DEBUG 2026-01-09 11:17:35.672 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/module
+DEBUG 2026-01-09 11:17:35.672 UTC: 	 Checking directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/config/SCRAM/hooks
+DEBUG 2026-01-09 11:17:35.672 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/config/SCRAM/hooks to tarball
+DEBUG 2026-01-09 11:17:35.930 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/CSCRecHitD/python to tarball
+DEBUG 2026-01-09 11:17:35.952 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/CSCSegment/python to tarball
+DEBUG 2026-01-09 11:17:35.979 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/Configuration/python to tarball
+DEBUG 2026-01-09 11:17:36.016 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/DTRecHit/interface to tarball
+DEBUG 2026-01-09 11:17:36.021 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/DTRecHit/python to tarball
+DEBUG 2026-01-09 11:17:36.044 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/DTSegment/python to tarball
+DEBUG 2026-01-09 11:17:36.138 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMCSCSegment/python to tarball
+DEBUG 2026-01-09 11:17:36.173 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMRecHit/data to tarball
+DEBUG 2026-01-09 11:17:36.176 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMRecHit/interface to tarball
+DEBUG 2026-01-09 11:17:36.212 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMRecHit/python to tarball
+DEBUG 2026-01-09 11:17:36.236 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/GEMSegment/python to tarball
+DEBUG 2026-01-09 11:17:36.254 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/RPCRecHit/data to tarball
+DEBUG 2026-01-09 11:17:36.488 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/RecoLocalMuon/RPCRecHit/python to tarball
+DEBUG 2026-01-09 11:17:36.542 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/Configuration/Generator/data to tarball
+DEBUG 2026-01-09 11:17:36.685 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/Configuration/Generator/python to tarball
+DEBUG 2026-01-09 11:17:38.917 UTC: 	 Adding directory /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/python to tarball
+DEBUG 2026-01-09 11:17:39.833 UTC: 	 Uploading archive /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/daa55085-177f-4f68-a2c8-f2289f75a56adefault.tgz (3.030273.1 MB) to the CRAB cache.
+DEBUG 2026-01-09 11:17:41.084 UTC: 	 Encoded data for curl request: subresource=upload&objecttype=sandbox&tarballname=b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz
+DEBUG 2026-01-09 11:17:41.140 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=kkeshav/sandboxes/b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz" -F "AWSAccessKeyId=715203df6482458ba839e73e6dab634b" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjYtMDEtMDlUMTI6MTc6NDFaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAia2tlc2hhdi9zYW5kYm94ZXMvYjY3YjE2NTE5ZjQwMTk3MGJhZjU4MzU3YzBhN2I5ODc4MTRkZDRiZTQxMWIzNWUzYjc5MWM4OTQwMTc0N2MwMC50YXIuZ3oifV19" -F "signature=jw60pNGclNQupGdxewMn7Yzx73A=" -F "file=@/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/daa55085-177f-4f68-a2c8-f2289f75a56adefault.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2026-01-09 11:17:42.266 UTC: 	 exitcode: 0
+stdout: b''
+DEBUG 2026-01-09 11:17:42.266 UTC: 	 upload to S3 of sandbox /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/daa55085-177f-4f68-a2c8-f2289f75a56adefault.tgz completed
+DEBUG 2026-01-09 11:17:42.266 UTC: 	 make sure that object is ready for retrieve
+DEBUG 2026-01-09 11:17:43.268 UTC: 	 Encoded data for curl request: subresource=download&objecttype=sandbox&tarballname=b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz&clientmethod=head_object
+DEBUG 2026-01-09 11:17:43.306 UTC: 	 PreSignedUrl to download sandbox received OK
+DEBUG 2026-01-09 11:17:43.311 UTC: 	 Will execute:
+ curl -v -s -f -o /dev/null --head  "https://s3.cern.ch/crabcache_prod/kkeshav/sandboxes/b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz?AWSAccessKeyId=715203df6482458ba839e73e6dab634b&Signature=z8YGeSE3vwciCf49GfEwjpbgFTQ%3D&Expires=1767961063"
+DEBUG 2026-01-09 11:17:43.330 UTC: 	 exitcode: 0
+stdout: b''
+DEBUG 2026-01-09 11:17:43.330 UTC: 	 sandbox /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/daa55085-177f-4f68-a2c8-f2289f75a56adefault.tgz successfully uploaded to S3
+DEBUG 2026-01-09 11:17:43.331 UTC: 	 Loading required information from the environment
+DEBUG 2026-01-09 11:17:43.331 UTC: 	 Found CMSSW_15_1_0 for el8_amd64_gcc12 with base /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0
+DEBUG 2026-01-09 11:17:43.331 UTC: 	 Making tarball in /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/debugFiles.tgz
+DEBUG 2026-01-09 11:17:43.335 UTC: 	 Uploading archive /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/debugFiles.tgz (2 KB) to the CRAB cache.
+DEBUG 2026-01-09 11:17:43.337 UTC: 	 Encoded data for curl request: subresource=upload&objecttype=sandbox&tarballname=e4e464c139889c387c211aa9e37c8ba85e0439da2df895ccdd06d920c634c645.tar.gz
+DEBUG 2026-01-09 11:17:43.391 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=kkeshav/sandboxes/e4e464c139889c387c211aa9e37c8ba85e0439da2df895ccdd06d920c634c645.tar.gz" -F "AWSAccessKeyId=715203df6482458ba839e73e6dab634b" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjYtMDEtMDlUMTI6MTc6NDNaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAia2tlc2hhdi9zYW5kYm94ZXMvZTRlNDY0YzEzOTg4OWMzODdjMjExYWE5ZTM3YzhiYTg1ZTA0MzlkYTJkZjg5NWNjZGQwNmQ5MjBjNjM0YzY0NS50YXIuZ3oifV19" -F "signature=6fjbalOdexqoJRaxTuLh5IOWNfs=" -F "file=@/afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/debugFiles.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2026-01-09 11:17:43.487 UTC: 	 exitcode: 0
+stdout: b''
+DEBUG 2026-01-09 11:17:43.487 UTC: 	 upload to S3 of sandbox /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/debugFiles.tgz completed
+DEBUG 2026-01-09 11:17:43.487 UTC: 	 make sure that object is ready for retrieve
+DEBUG 2026-01-09 11:17:44.487 UTC: 	 Encoded data for curl request: subresource=download&objecttype=sandbox&tarballname=e4e464c139889c387c211aa9e37c8ba85e0439da2df895ccdd06d920c634c645.tar.gz&clientmethod=head_object
+DEBUG 2026-01-09 11:17:44.523 UTC: 	 PreSignedUrl to download sandbox received OK
+DEBUG 2026-01-09 11:17:44.528 UTC: 	 Will execute:
+ curl -v -s -f -o /dev/null --head  "https://s3.cern.ch/crabcache_prod/kkeshav/sandboxes/e4e464c139889c387c211aa9e37c8ba85e0439da2df895ccdd06d920c634c645.tar.gz?AWSAccessKeyId=715203df6482458ba839e73e6dab634b&Signature=VKzLwnedcXQ8RbDjoy3P4aDmR04%3D&Expires=1767961064"
+DEBUG 2026-01-09 11:17:44.562 UTC: 	 exitcode: 0
+stdout: b''
+DEBUG 2026-01-09 11:17:44.562 UTC: 	 sandbox /afs/cern.ch/user/k/kkeshav/CMSSW_15_1_0/src/GEMCSCBendingAnalyzer/GEM_Alignment/test/crabLogs/crab_Run2025C_muon0_v0/inputs/debugFiles.tgz successfully uploaded to S3
+DEBUG 2026-01-09 11:17:44.562 UTC: 	 Result uploading input files: b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz 
+DEBUG 2026-01-09 11:17:44.562 UTC: 	 submit() - self.configuration from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.workArea = 'crabLogs'
+config.General.transferLogs = True
+config.General.requestName = 'Run2025C_muon0_v0'
+config.General.transferOutputs = True
+config.section_('JobType')
+config.JobType.pluginName = 'Analysis'
+config.JobType.numCores = 1
+config.JobType.psetName = 'run_GE21ana.py'
+config.section_('Data')
+config.Data.publication = False
+config.Data.inputDataset = '/Muon0/Run2025C-ZMu-PromptReco-v1/RAW-RECO'
+config.Data.outLFNDirBase = '/store/user/toakhter/tamu_mual/2025/2025C'
+config.Data.unitsPerJob = 1
+config.Data.outputDatasetTag = 'Run2025C_muon0_v0'
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.section_('Site')
+config.Site.storageSite = 'T3_CH_CERNBOX'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2026-01-09 11:17:44.562 UTC: 	 submit() - self.configreq {'dryrun': 0, 'workflow': 'crab_Run2025C_muon0_v0', 'saveoutput': 1, 'savelogsflag': 1, 'inputdata': '/Muon0/Run2025C-ZMu-PromptReco-v1/RAW-RECO', 'nonvaliddata': 0, 'userfiles': [], 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'useparent': 0, 'ignorelocality': 0, 'splitalgo': 'FileBased', 'algoargs': 1, 'totalunits': 0, 'lfn': '/store/user/toakhter/tamu_mual/2025/2025C', 'publication': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'publishname2': 'Run2025C_muon0_v0', 'jobtype': 'Analysis', 'generator': 'pythia', 'addoutputfiles': [], 'maxjobruntime': 1250, 'numcores': 1, 'maxmemory': 2000, 'priority': 10, 'nonprodsw': 0, 'asyncdest': 'T3_CH_CERNBOX', 'requireaccelerator': 0, 'oneEventMode': 0, 'extrajdl': [], 'ignoreglobalblacklist': 0, 'partialdataset': 0, 'inputblocks': []}
+DEBUG 2026-01-09 11:17:44.562 UTC: 	 submit() - jobconfig {'addoutputfiles': [], 'tfileoutfiles': ['output_test.root'], 'edmoutfiles': [], 'jobarch': 'el8_amd64_gcc12', 'jobminuarch': 'x86-64-v3', 'jobsw': 'CMSSW_15_1_0', 'inputdata': '/Muon0/Run2025C-ZMu-PromptReco-v1/RAW-RECO', 'cachefilename': 'b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz', 'debugfilename': 'e4e464c139889c387c211aa9e37c8ba85e0439da2df895ccdd06d920c634c645.tar.gz', 'jobtype': 'Analysis'}
+INFO 2026-01-09 11:17:44.562 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2026-01-09 11:17:44.563 UTC: 	 Submitting {'dryrun': 0, 'workflow': 'crab_Run2025C_muon0_v0', 'saveoutput': 1, 'savelogsflag': 1, 'inputdata': '/Muon0/Run2025C-ZMu-PromptReco-v1/RAW-RECO', 'nonvaliddata': 0, 'userfiles': [], 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'useparent': 0, 'ignorelocality': 0, 'splitalgo': 'FileBased', 'algoargs': 1, 'totalunits': 0, 'lfn': '/store/user/toakhter/tamu_mual/2025/2025C', 'publication': 0, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'publishname2': 'Run2025C_muon0_v0', 'jobtype': 'Analysis', 'generator': 'pythia', 'addoutputfiles': [], 'maxjobruntime': 1250, 'numcores': 1, 'maxmemory': 2000, 'priority': 10, 'nonprodsw': 0, 'asyncdest': 'T3_CH_CERNBOX', 'requireaccelerator': 0, 'oneEventMode': 0, 'extrajdl': [], 'ignoreglobalblacklist': 0, 'partialdataset': 0, 'inputblocks': [], 'tfileoutfiles': ['output_test.root'], 'edmoutfiles': [], 'jobarch': 'el8_amd64_gcc12', 'jobminuarch': 'x86-64-v3', 'jobsw': 'CMSSW_15_1_0', 'cachefilename': 'b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz', 'debugfilename': 'e4e464c139889c387c211aa9e37c8ba85e0439da2df895ccdd06d920c634c645.tar.gz'} 
+DEBUG 2026-01-09 11:17:44.563 UTC: 	 Encoded data for curl request: dryrun=0&workflow=crab_Run2025C_muon0_v0&saveoutput=1&savelogsflag=1&inputdata=%2FMuon0%2FRun2025C-ZMu-PromptReco-v1%2FRAW-RECO&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&useparent=0&ignorelocality=0&splitalgo=FileBased&algoargs=1&totalunits=0&lfn=%2Fstore%2Fuser%2Ftoakhter%2Ftamu_mual%2F2025%2F2025C&publication=0&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&publishname2=Run2025C_muon0_v0&jobtype=Analysis&generator=pythia&maxjobruntime=1250&numcores=1&maxmemory=2000&priority=10&nonprodsw=0&asyncdest=T3_CH_CERNBOX&requireaccelerator=0&oneEventMode=0&ignoreglobalblacklist=0&partialdataset=0&jobarch=el8_amd64_gcc12&jobminuarch=x86-64-v3&jobsw=CMSSW_15_1_0&cachefilename=b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz&debugfilename=e4e464c139889c387c211aa9e37c8ba85e0439da2df895ccdd06d920c634c645.tar.gz&tfileoutfiles=output_test.root
+DEBUG 2026-01-09 11:17:44.703 UTC: 	 Sleeping 24 seconds after HTTP error.
+Error:
+:  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.184.73.32:8443...
+* Connected to cmsweb.cern.ch (188.184.73.32) port 8443 (#0)
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+*  CApath: /etc/grid-security/certificates/
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [25 bytes data]
+* TLSv1.3 (IN), TLS handshake, Request CERT (13):
+{ [8108 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2064 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Certificate (11):
+} [6308 bytes data]
+* TLSv1.3 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: May  6 09:49:35 2025 GMT
+*  expire date: Jun 10 09:49:35 2026 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> PUT /crabserver/prod/workflow HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.251020
+> Accept: */*
+> Content-Length: 937
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [937 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [6422 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 400 Bad Request
+< Content-Length: 733
+< Content-Type: text/html;charset=utf-8
+< Date: Fri, 09 Jan 2026 11:17:44 GMT
+< Response-Proto: HTTP/1.1
+< Response-Status: 400 Bad Request
+< Response-Status-Code: 400
+< Response-Time: 111.652388ms
+< Response-Time-Seconds: 0.111652953
+< X-Content-Type-Options: bla
+< X-Error-Detail: Invalid input parameter
+< X-Error-Http: 400
+< X-Error-Id: 9539f4a7448607686167db259f40bba5
+< X-Error-Info: The parameter Data.outLFNDirBase in the CRAB configuration file must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off...
+< X-Rest-Status: 302
+< X-Rest-Time: 107441.664 us
+< 
+{ [510 bytes data]
+100  1670  100   733  100   937   5866   7499 --:--:-- --:--:-- --:--:-- 13467
+* Connection #0 to host cmsweb.cern.ch left intact
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>400 Bad Request</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>400 Bad Request</h2>
+        <p>Invalid input parameter</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+      <span>
+        Powered by <a href="http://www.cherrypy.dev">CherryPy 18.8.0</a>
+      </span>
+    </div>
+    </body>
+</html>
+
+DEBUG 2026-01-09 11:17:44.861 UTC: 	 Sleeping 35 seconds after HTTP error.
+Error:
+:  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.184.73.32:8443...
+* Connected to cmsweb.cern.ch (188.184.73.32) port 8443 (#0)
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+*  CApath: /etc/grid-security/certificates/
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [25 bytes data]
+* TLSv1.3 (IN), TLS handshake, Request CERT (13):
+{ [8108 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2064 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Certificate (11):
+} [6308 bytes data]
+* TLSv1.3 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: May  6 09:49:35 2025 GMT
+*  expire date: Jun 10 09:49:35 2026 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> PUT /crabserver/prod/workflow HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.251020
+> Accept: */*
+> Content-Length: 937
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [937 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [6422 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 400 Bad Request
+< Content-Length: 733
+< Content-Type: text/html;charset=utf-8
+< Date: Fri, 09 Jan 2026 11:17:44 GMT
+< Response-Proto: HTTP/1.1
+< Response-Status: 400 Bad Request
+< Response-Status-Code: 400
+< Response-Time: 127.894237ms
+< Response-Time-Seconds: 0.127894824
+< X-Content-Type-Options: bla
+< X-Error-Detail: Invalid input parameter
+< X-Error-Http: 400
+< X-Error-Id: f25202c7d1f30517ec6b9a2c58be2b7c
+< X-Error-Info: The parameter Data.outLFNDirBase in the CRAB configuration file must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off...
+< X-Rest-Status: 302
+< X-Rest-Time: 122826.815 us
+< 
+{ [510 bytes data]
+ 86  1670   69   510  100   937   3634   6678 --:--:-- --:--:-- --:--:-- 10262100  1670  100   733  100   937   5220   6674 --:--:-- --:--:-- --:--:-- 11843
+* Connection #0 to host cmsweb.cern.ch left intact
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>400 Bad Request</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>400 Bad Request</h2>
+        <p>Invalid input parameter</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+      <span>
+        Powered by <a href="http://www.cherrypy.dev">CherryPy 18.8.0</a>
+      </span>
+    </div>
+    </body>
+</html>
+
+INFO 2026-01-09 11:17:44.998 UTC: 	 Fatal error trying to connect to https://cmsweb.cern.ch:8443/crabserver/prod/workflow using dryrun=0&workflow=crab_Run2025C_muon0_v0&saveoutput=1&savelogsflag=1&inputdata=%2FMuon0%2FRun2025C-ZMu-PromptReco-v1%2FRAW-RECO&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&useparent=0&ignorelocality=0&splitalgo=FileBased&algoargs=1&totalunits=0&lfn=%2Fstore%2Fuser%2Ftoakhter%2Ftamu_mual%2F2025%2F2025C&publication=0&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&publishname2=Run2025C_muon0_v0&jobtype=Analysis&generator=pythia&maxjobruntime=1250&numcores=1&maxmemory=2000&priority=10&nonprodsw=0&asyncdest=T3_CH_CERNBOX&requireaccelerator=0&oneEventMode=0&ignoreglobalblacklist=0&partialdataset=0&jobarch=el8_amd64_gcc12&jobminuarch=x86-64-v3&jobsw=CMSSW_15_1_0&cachefilename=b67b16519f401970baf58357c0a7b987814dd4be411b35e3b791c89401747c00.tar.gz&debugfilename=e4e464c139889c387c211aa9e37c8ba85e0439da2df895ccdd06d920c634c645.tar.gz&tfileoutfiles=output_test.root.
+exit code from curl = 0
+HTTP code/reason = 400/Bad Request .  stdout:
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>400 Bad Request</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>400 Bad Request</h2>
+        <p>Invalid input parameter</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+      <span>
+        Powered by <a href="http://www.cherrypy.dev">CherryPy 18.8.0</a>
+      </span>
+    </div>
+    </body>
+</html>
+
+INFO 2026-01-09 11:17:44.999 UTC: 	 The server answered with an error.
+DEBUG 2026-01-09 11:17:44.999 UTC: 	 
+INFO 2026-01-09 11:17:44.999 UTC: 	 Server answered with: Invalid input parameter
+INFO 2026-01-09 11:17:44.999 UTC: 	 Reason is: The parameter Data.outLFNDirBase in the CRAB configuration file must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off...
+INFO 2026-01-09 11:17:44.999 UTC: 	 Error Id: 9e4ba8a92a255ed3f626dc2c1d623e30
+ERROR 2026-01-09 11:17:44.999 UTC: 	 Caught RESTInterfaceException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 157, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/bin/crab.py", line 142, in __call__
+    returnDict = self.cmd()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/Commands/submit.py", line 133, in __call__
+    dictresult, status, reason = server.put(api=self.defaultApi, data=self.configreq_encoded)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/RestInterfaces.py", line 299, in put
+    return self.server.put(uri, data)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/RestInterfaces.py", line 145, in put
+    return self.makeRequest(uri=uri, data=data, verb='PUT')
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.251020.00/lib/CRABClient/RestInterfaces.py", line 237, in makeRequest
+    raise RESTInterfaceException(stderr)
+CRABClient.ClientExceptions.RESTInterfaceException:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 188.184.73.32:8443...
+* Connected to cmsweb.cern.ch (188.184.73.32) port 8443 (#0)
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+*  CApath: /etc/grid-security/certificates/
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [25 bytes data]
+* TLSv1.3 (IN), TLS handshake, Request CERT (13):
+{ [8108 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [2064 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Certificate (11):
+} [6308 bytes data]
+* TLSv1.3 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: May  6 09:49:35 2025 GMT
+*  expire date: Jun 10 09:49:35 2026 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> PUT /crabserver/prod/workflow HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.251020
+> Accept: */*
+> Content-Length: 937
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [937 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [6422 bytes data]
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 400 Bad Request
+< Content-Length: 733
+< Content-Type: text/html;charset=utf-8
+< Date: Fri, 09 Jan 2026 11:17:44 GMT
+< Response-Proto: HTTP/1.1
+< Response-Status: 400 Bad Request
+< Response-Status-Code: 400
+< Response-Time: 108.298224ms
+< Response-Time-Seconds: 0.108298633
+< X-Content-Type-Options: bla
+< X-Error-Detail: Invalid input parameter
+< X-Error-Http: 400
+< X-Error-Id: 9e4ba8a92a255ed3f626dc2c1d623e30
+< X-Error-Info: The parameter Data.outLFNDirBase in the CRAB configuration file must start with either '/store/user/<username>/' or '/store/group/<groupname>/' (or '/store/local/<something>/' if publication is off...
+< X-Rest-Status: 302
+< X-Rest-Time: 103578.329 us
+< 
+{ [510 bytes data]
+100  1670  100   733  100   937   6068   7757 --:--:-- --:--:-- --:--:-- 13916
+* Connection #0 to host cmsweb.cern.ch left intact
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>400 Bad Request</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>400 Bad Request</h2>
+        <p>Invalid input parameter</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+      <span>
+        Powered by <a href="http://www.cherrypy.dev">CherryPy 18.8.0</a>
+      </span>
+    </div>
+    </body>
+</html>
+
